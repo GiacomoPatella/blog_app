@@ -3,7 +3,8 @@ require 'spec_helper'
 describe 'adding comments to a post' do
   
   before do
-    create(:post)    
+    create(:post)
+    login
   end
 
   it 'adds comments from a form providing Text' do
