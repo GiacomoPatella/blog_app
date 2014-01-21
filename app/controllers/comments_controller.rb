@@ -12,6 +12,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(params[:comment].permit(:body))
     @comment.post_id = @post.id
     #post.comments << @comment
+    @comment.user = current_user
 
     if @comment.save
     redirect_to '/posts'
