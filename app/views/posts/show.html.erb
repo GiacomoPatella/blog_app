@@ -1,4 +1,16 @@
 <h1><%= @post.title %></h1>
 <%= @post.content %>
 <br><br>
-<%= link_to 'Home', posts_path %>
+
+<p><% @post.comments.each do |comment| %>
+  <strong>From: <%= comment.user.email %> >>> </strong>
+  "<%= comment.body %>"</p>
+<% end %>
+
+</br>
+<%= link_to 'Edit post', edit_post_path(@post) %>&nbsp&nbsp
+<%= link_to 'Add a comment', new_post_comment_path(@post) %>&nbsp&nbsp
+<%= link_to 'Delete post', post_path(@post) , method: :delete, data: { confirm: 'Are you sure you want to delete this post?' } %>&nbsp&nbsp
+</br></br>
+
+<%= link_to 'Home', posts_path, class: 'btn btn-lng btn-success' %>

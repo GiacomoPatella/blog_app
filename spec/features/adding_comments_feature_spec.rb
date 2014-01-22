@@ -11,8 +11,8 @@ describe 'adding comments to a post' do
     visit '/posts'
     click_link 'Add a comment'
 
-    fill_in 'Body', with: 'This article is great'
-    click_button 'Create Comment'
+    fill_in 'Your comment:', with: 'This article is great'
+    click_button 'Submit Comment'
 
     expect(page).to have_content 'This article is great'
   end

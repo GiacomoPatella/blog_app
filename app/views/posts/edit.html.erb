@@ -1,9 +1,11 @@
 <%= form_for @post do |form| %>
-  <%= form.label :title %>
+  <br><br>
+  <%= form.label :title %><br>
   <%= form.text_field :title %>
-  </br></br>
-  <%= form.label :content %>
+  <br><br>
+  <%= form.label :content %><br>
   <%= form.text_area :content %>
-  </br></br>
-  <%= form.submit %>
+  <br><br>
+  <%= form.submit class: 'btn btn-lng btn-success' %>
 <% end %>
+  <br>
