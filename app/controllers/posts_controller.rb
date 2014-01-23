@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
 
   def create
-    @post = Post.new(params[:post].permit(:title, :content))
+    @post = Post.new(params[:post].permit(:title, :content, :image))
 
     if @post.save
     redirect_to '/posts'
@@ -29,7 +29,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    @post.update(params[:post].permit(:title, :content))   #this is not the method we're defining but an Active record method called on Post
+    @post.update(params[:post].permit(:title, :content, :image))   #this is not the method we're defining but an Active record method called on Post
     if @post.save
     redirect_to post_path(@post)
     else

@@ -40,6 +40,7 @@ gem 'factory_girl_rails'
 gem 'capybara'
 gem 'database_cleaner'
 gem 'devise'
+gem "paperclip", "~> 3.0"
 
 
 # Use ActiveModel has_secure_password

@@ -62,12 +62,13 @@
           <!-- these next there lines of code are from our
           original application.html.erb bfeore running 
           rails g bootstrap:layout application fluid -->
-<!--           <p class="notice"><%= notice %></p>
+          <!-- <p class="notice"><%= notice %></p>
           <p class="alert"><%= alert %></p> -->
 
           <%= yield %>
         </div>
       </div><!--/row-->
+      <br><%= link_to 'Add new post', new_post_path(@post), class: 'btn btn-lng btn-success' %>
 
       <footer>
         <br>
